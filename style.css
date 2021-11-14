@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+p {
+    font-weight: 300;
+    color: black;
+}
+.banner {
+    position:relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/front\ face.jpeg);
+    background-size: cover;
+}
+.banner .content {
+    max-width: 900px;
+    text-align: center;
+}
+.banner .content h2 {
+    font-size: 4em;
+    color: black;
+}
+.banner .content h3 {
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    color: black;
+
+}
+.banner .content p {
+    font-size: 1em;
+    color: white;
+}
+.btn {
+    font-size: 1em;
+    color: #111;
+    background: salmon;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.btn:hover {
+    letter-spacing: 6px;
+}
+
+.change-content:after{
+    content: '';
+    animation: changetext 10s infinite linear;
+    color: white;
+    font-weight: bold;
+}
+@keyframes changetext {
+    0% {content:"Wise!";}
+    20% {content:"Better!";}
+    40% {content:"Human!";}
+    60% {content:"Better!";}
+    80% {content:"Useful!";}
+    100% {content:"Complete!";}
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky {
+    background: rgba(0,0,0,0.05);
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+header .logo {
+    color: black;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header.sticky .logo {
+    color:black;
+}
+header .logo span {
+    color: tomato;
+} 
+header .navigation {
+    position: relative;
+    display: flex;
+}
+header .navigation.active {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+}
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+header .navigation li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+header .navigation li a:hover {
+    color: red;
+}
+header.sticky .navigation li a {
+    color: black;
+}
+header.sticky .navigation li a:hover {
+    color: blue;
+}
+
+section {
+    padding: 100px;
+}
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+.row .col50 p {
+    color: black;
+    font-size: 1.2em;
+}
+.titleText {
+    color: black;
+    font-size: 2em;
+    font-weight: 300;
+}
+.titleText span {
+    color: red;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.row .col50 .imgBx {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.row .col50 .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.row .col50 q {
+    font-style: italic;
+    font-size: 1.5em;
+    color: black;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.facilities .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.facilities .content .box {
+    width: 400px;
+    margin: 20px;
+    border: 5px solid black;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+}
+.facilities .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.facilities .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.facilities .content .box .text {
+    padding:15px 0 5px;
+}
+.facilities .content .box .text h3 {
+    font-weight: bold;
+    color: black;
+}
+.facilities .content .box .text p {
+    font-size: 0.8em;
+    color: black;
+}
+
+.expert .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.expert .content .box {
+    width: 300px;
+    margin: 20px;
+}
+.expert .content .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+.expert .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25%;
+}
+.expert .content .box .text {
+    padding: 15px 0 10px;
+}
+.expert .content .box .text h3 {
+    font-weight: 500;
+    color: black;
+}
+.expert .content .box .text li {
+    font-weight: 300;
+    color: black;
+}
+.expert .content .box .text li span {
+    color: royalblue;
+}
+
+.achievements {
+    background: url(./images/drone/Photo/1.jpg);
+    background-size: cover;
+}
+.white .titleText, .white p {
+    color: white;
+}
+.achievements .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.achievements .content .box {
+    width: 500px;
+    margin: 15px;
+    padding: 45px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.achievements .content .box .imgBx {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin-bottom: 20px;
+    border-radius: 10%;
+    overflow: hidden;
+}
+.achievements .content .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.achievements .content .box .text {
+    text-align: center;
+}
+.achievements .content .box .text p {
+    color: black;
+    font-weight: bold;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 200px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent,#0006);
+  }
+.contact {
+    background:url(./images/drone/Photo/7.jpg);
+    background-size: cover;
+}
+.contactForm {
+    padding: 75px 50px;
+    background: white;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-top: 50px;
+}
+.contactForm h3 {
+    color: black;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.contactForm li {
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: black;
+}
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contactForm .inputBox input {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: black;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+.contactForm .inputBox input[type="submit"] {
+    font-size: 1em;
+    color: white;
+    background: red;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.copyRightText {
+    padding: 5px 30px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+}
+.copyRightText p {
+    color: black;
+    font-size: 1em;
+}
+
+@media (max-width:991px) {
+    header, header.sticky {
+        padding: 10px 20px;
+    }
+    header .navigation {
+        display: none;
+    }
+    header .navigation.active {
+        width: 100%;
+        height: calc(100%-68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: white;
+    }
+    header .navigation li {
+        margin-left: 0;
+    }
+    header .navigation li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.6em;
+    }
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(https://css-tricks.com/wp-content/uploads/2012/10/threelines.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuToggle.active {
+        background: url(https://www.pinclipart.com/picdir/middle/35-356107_close-button-icon-png-clipart.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+    section {
+        padding: 20px;
+    }
+    .banner .content h2 {
+        font-size: 3em;
+        color: black;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .col50 {
+        position: relative;
+        width: 180%;
+    }
+    .row .col50 .imgBx {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .facilities .content {
+        margin-top: 20px;
+    }
+    .facilities .content .box {
+        margin: 10px;
+    }
+    .facilities .content .box .imgBx {
+        height: 260px;
+    }
+    .title {
+        text-align: center;
+    }
+    .titleText {
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+        font-weight: 400;
+    }
+    .achievements .content .box {
+        margin: 10px;
+        padding: 20px;
+    }
+    .contactForm {
+        padding: 35px 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+ }
+ @media (max-width: 480px) {
+     .banner .content h2 {
+         font-size: 2.2em;
+         color: white;
+     }
+ }
